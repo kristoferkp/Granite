@@ -1,181 +1,50 @@
-# Granite - E2E Encrypted Notes App
+# Welcome to your Expo app 👋
 
-A secure, privacy-focused notes application built with end-to-end encryption. This monorepo contains the mobile app, API server, and shared packages.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## 🏗️ Monorepo Structure
+## Get started
 
-```
-granite-monorepo/
-├── apps/
-│   ├── mobile/          # React Native Expo app
-│   └── api/             # Hono API server
-├── packages/
-│   └── shared/          # Shared types and utilities
-├── package.json         # Root workspace configuration
-└── DESIGN.md           # Detailed design document
-```
+1. Install dependencies
 
-## 🚀 Quick Start
-
-### Prerequisites
-- [Bun](https://bun.sh) (latest version)
-- Node.js 18+ (for Expo CLI compatibility)
-- iOS Simulator / Android Emulator for mobile development
-
-### Installation
-
-1. **Clone and install dependencies:**
    ```bash
-   git clone <repository-url>
-   cd Granite
-   bun install
+   npm install
    ```
 
-2. **Environment setup:**
+2. Start the app
+
    ```bash
-   # Copy API environment template
-   cp apps/api/.env.example apps/api/.env
-   # Edit the .env file with your database and JWT configuration
+   npx expo start
    ```
 
-## 📱 Development
+In the output, you'll find options to open the app in a
 
-### Start all services
-```bash
-bun dev
-```
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-### Start individual services
-```bash
-# Mobile app
-bun app:dev
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-# API server  
-bun api:dev
+## Get a fresh project
 
-# Shared package (watch mode)
-bun shared:build
-```
-
-## 🏗️ Workspace Commands
-
-### Building
-```bash
-# Build all packages
-bun build
-
-# Build specific package
-bun --filter @granite/shared build
-bun --filter @granite/api build
-```
-
-### Testing
-```bash
-# Run all tests
-bun test
-
-# Test specific workspace
-bun --filter @granite/api test
-```
-
-### Linting
-```bash
-# Lint all packages
-bun lint
-
-# Lint specific package
-bun --filter @granite/mobile lint
-```
-
-## 📦 Packages
-
-### Apps
-
-#### `@granite/app` (Mobile)
-- **Tech Stack:** React Native, Expo, TypeScript
-- **Features:** E2E encrypted notes, offline-first, biometric auth
-- **Development:** `bun app:dev`
-
-#### `@granite/api` (Server)
-- **Tech Stack:** Hono, TypeScript, Drizzle ORM, PostgreSQL  
-- **Features:** Zero-knowledge API, JWT auth, note sync
-- **Development:** `bun api:dev`
-
-### Packages
-
-#### `@granite/shared`
-- **Purpose:** Shared types, utilities, and validation schemas
-- **Exports:** Types, utilities, Zod schemas
-- **Used by:** Both mobile app and API server
-
-## 🔧 Workspace Configuration
-
-This monorepo uses **Bun workspaces** with catalog management for consistent dependency versions:
-
-### Catalogs
-- **Default catalog:** Core dependencies (React, TypeScript, etc.)
-- **expo:** Expo-specific packages
-- **react-native:** React Native navigation and UI packages  
-- **api:** Backend-specific packages (Hono, database, etc.)
-- **dev:** Development and build tools
-
-### Adding Dependencies
+When you're ready, run:
 
 ```bash
-# Add to specific workspace
-cd apps/mobile && bun add react-native-keychain
-
-# Add using workspace filter
-bun --filter @granite/api add drizzle-orm
-
-# Add to catalog (from root)
-# Edit package.json catalogs section
+npm run reset-project
 ```
 
-## 🚀 Deployment
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-### API Server
-```bash
-# Build for production
-bun --filter @granite/api build
+## Learn more
 
-# Start production server
-bun --filter @granite/api start
-```
+To learn more about developing your project with Expo, look at the following resources:
 
-### Mobile App
-```bash
-# Build for iOS
-cd apps/mobile && bun ios --configuration Release
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-# Build for Android  
-cd apps/mobile && bun android --mode release
-```
+## Join the community
 
-## 🔒 Security Features
+Join our community of developers creating universal apps.
 
-- **End-to-end encryption** using AES-256-GCM
-- **Zero-knowledge architecture** - server never sees decrypted content
-- **Local-first design** with optional cloud sync
-- **Biometric authentication** support
-- **Secure key derivation** using PBKDF2
-
-## 📖 Documentation
-
-- [Design Document](./DESIGN.md) - Complete technical specification
-- [API Documentation](./apps/api/README.md) - API endpoints and schemas
-- [Mobile App Guide](./apps/mobile/README.md) - React Native app documentation
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes in the appropriate workspace
-4. Test your changes: `bun test`
-5. Commit your changes: `git commit -m 'Add amazing feature'`
-6. Push to the branch: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
