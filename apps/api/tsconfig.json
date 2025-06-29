@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "ESNext", 
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "noEmit": true,
@@ -13,18 +13,15 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": false,
     "paths": {
-      "@granite/shared": ["./packages/shared/src"],
-      "@granite/shared/*": ["./packages/shared/src/*"],
-      "@/*": ["./apps/mobile/*"]
+      "@granite/shared": ["../../packages/shared/src"],
+      "@granite/shared/*": ["../../packages/shared/src/*"]
     }
   },
   "include": [
-    "apps/**/*",
-    "packages/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "build"
+    "dist"
   ]
 }
