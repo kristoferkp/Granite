@@ -118,7 +118,7 @@ app.onError((err, c) => {
 });
 
 // Start server
-const port = parseInt(process.env.PORT || '8081');
+const port = parseInt(process.env.PORT || '8080');
 
 console.log(`🚀 Granite API Server starting on port ${port}`);
 

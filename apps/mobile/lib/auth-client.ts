@@ -8,7 +8,7 @@ const getBaseURL = () => {
   if (__DEV__) {
     // In development, use the local IP or localhost
     const debuggerHost = Constants.expoConfig?.hostUri?.split(':')[0];
-    return debuggerHost ? `http://${debuggerHost}:8081` : 'http://localhost:8081';
+    return debuggerHost ? `http://${debuggerHost}:8080` : 'http://localhost:8080';
   }
   
   // In production, use your actual API URL
