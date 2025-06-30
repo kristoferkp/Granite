@@ -1,0 +1,19 @@
+/* Tamagui web styles */
+:root {
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --color-background: #fff;
+  --color-foreground: #000;
+}
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000;
+    --color-foreground: #fff;
+  }
+}
