@@ -1,0 +1,1 @@
+Use the context7 tool to fetch documentation. Use context7 every time you implement a function or need to understand a specific concept. Always ensure you have the most up-to-date information from the documentation.
